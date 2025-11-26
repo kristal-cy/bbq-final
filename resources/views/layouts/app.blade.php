@@ -12,11 +12,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
-    @if(Request::routeIs('dashboard'))
-        <link rel="stylesheet" href="{{ asset('dashboard.css') }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('output.css') }}">
-    @endif
+    @vite(['resources/css/app.css'])
 
     @stack('styles')
 </head>

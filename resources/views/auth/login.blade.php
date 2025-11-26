@@ -6,11 +6,11 @@
 
 @section('content')
     <div class="flex w-full max-w-4xl shadow-2xl rounded-lg overflow-hidden h-[600px]">
-        <div class="logo-left-side w-1/2 p-10">
+        <div class="bg-white flex items-center justify-center w-1/2 p-10">
             <img src="{{ asset('images/logo1.png') }}" alt="BBQ-Lagao Logo" class="max-w-full h-auto">
         </div>
-        <div class="login-right-side w-1/2 flex items-center justify-center">
-            <div class="login-content w-full max-w-xs">
+        <div class="bg-[url('{{ asset('images/bg2.png') }}')] bg-cover bg-center relative overflow-hidden w-1/2 flex items-center justify-center before:absolute before:inset-0 before:backdrop-blur-[8px] before:bg-red-900/50">
+            <div class="relative z-20 p-8 w-full max-w-xs">
                 <h2 class="text-4xl font-extrabold text-center mb-10 tracking-widest uppercase">Login</h2>
                 <form action="{{ route('login') }}" method="POST" class="space-y-4">
                     @csrf
@@ -27,7 +27,7 @@
                             class="mt-1 block w-full px-4 py-3 bg-white/20 border-white/50 border rounded-lg placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white text-white">
                     </div>
 
-                    <div class="login-number-link">
+                    <div class="text-right -mt-1 mb-4">
                         <a href="{{ route('login.phone') }}" class="text-sm text-white hover:text-gray-300 underline">Login using number.</a>
                     </div>
 
@@ -47,10 +47,10 @@
     </div>
 
     <div id="warningModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-        <div class="error-box">
-            <h3 class="text-4xl font-extrabold error-text mb-4">Error</h3>
-            <p class="text-2xl font-semibold error-text mb-2">Email and password are required.</p>
-            <button id="closeModal" class="ok-button">OK</button>
+        <div class="bg-red-600 border-4 border-white rounded-3xl p-10 box-shadow-2xl max-w-sm text-center">
+            <h3 class="text-4xl font-extrabold text-white mb-4" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Error</h3>
+            <p class="text-2xl font-semibold text-white mb-2" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Email and password are required.</p>
+            <button id="closeModal" class="bg-[#f0f0f0] border-4 border-black rounded-2xl text-black text-xl font-bold p-5 mt-6 cursor-pointer shadow-lg hover:bg-[#e0e0e0]">OK</button>
         </div>
     </div>
 @endsection

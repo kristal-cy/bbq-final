@@ -2,7 +2,7 @@
 
 @section('title', 'Sign Up')
 
-@section('body-class', 'register-background flex items-center justify-center min-h-screen p-4')
+@section('body-class', 'bg-gradient-to-b from-[#d95353] to-[#a04040] flex items-center justify-center min-h-screen p-4')
 
 @section('content')
     <div class="w-full max-w-2xl bg-white/20 p-8 sm:p-10 rounded-xl shadow-2xl backdrop-blur-sm">
@@ -20,65 +20,65 @@
                 <div>
                     <label for="given_name" class="block text-white font-semibold mb-1">*Given Name:</label>
                     <input type="text" id="given_name" name="given_name" placeholder="Enter your given name..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
 
                 <div>
                     <label for="surname" class="block text-white font-semibold mb-1">*Surname:</label>
                     <input type="text" id="surname" name="surname" placeholder="Enter your surname..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
 
                 <div>
                     <label for="middle_initial" class="block text-white font-semibold mb-1">Middle Initial:</label>
                     <input type="text" id="middle_initial" name="middle_initial" placeholder="Enter your middle initial..."
-                        class="custom-input w-full">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full">
                 </div>
 
                 <div>
                     <label for="suffix" class="block text-white font-semibold mb-1">Suffix:</label>
                     <input type="text" id="suffix" name="suffix" placeholder="Enter your suffix... Ex. III, Jr., etc."
-                        class="custom-input w-full">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full">
                 </div>
 
                 <div class="sm:col-span-2">
                     <label for="address" class="block text-white font-semibold mb-1">*Address:</label>
                     <input type="text" id="address" name="address" placeholder="Enter your full address..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
 
                 <div>
                     <label for="email" class="block text-white font-semibold mb-1">*Email:</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
 
                 <div>
                     <label for="contact_number" class="block text-white font-semibold mb-1">*Contact Number:</label>
                     <input type="tel" id="contact_number" name="contact_number" placeholder="Enter your contact number..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
 
                 <div>
                     <label for="password" class="block text-white font-semibold mb-1">*Password:</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
 
                 <div>
                     <label for="confirm_password" class="block text-white font-semibold mb-1">*Confirm Password</label>
                     <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-type the password..."
-                        class="custom-input w-full required-field">
+                        class="bg-white/30 border border-white/60 text-white placeholder:text-white/70 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 w-full required-field">
                 </div>
             </div>
 
             <p class="text-white text-center text-lg mt-4">Fields marked with asterisk (<span class="text-yellow-300">*</span>) are required.</p>
 
             <div class="flex justify-center space-x-6 pt-4">
-                <a href="{{ route('login') }}" class="custom-btn hover:bg-gray-300">
+                <a href="{{ route('login') }}" class="bg-[#f0f0f0] text-[#d95353] border-none py-3 px-8 rounded-full font-bold text-xl cursor-pointer transition-colors hover:bg-[#e0e0e0] shadow-lg">
                     Back to Login
                 </a>
-                <button type="submit" class="custom-btn hover:bg-gray-300">
+                <button type="submit" class="bg-[#f0f0f0] text-[#d95353] border-none py-3 px-8 rounded-full font-bold text-xl cursor-pointer transition-colors hover:bg-[#e0e0e0] shadow-lg">
                     Confirm Registration
                 </button>
             </div>
@@ -87,18 +87,18 @@
     </div>
 
     <div id="errorModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-        <div class="error-box">
-            <h3 class="text-4xl font-extrabold error-text mb-4">Error</h3>
-            <p id="errorModalMessage" class="text-2xl font-semibold error-text mb-2">All required fields must be filled out.</p>
-            <button id="closeErrorModal" class="ok-button">OK</button>
+        <div class="bg-red-600 border-4 border-white rounded-3xl p-10 shadow-2xl max-w-sm text-center">
+            <h3 class="text-4xl font-extrabold text-white mb-4" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Error</h3>
+            <p id="errorModalMessage" class="text-2xl font-semibold text-white mb-2" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">All required fields must be filled out.</p>
+            <button id="closeErrorModal" class="bg-[#f0f0f0] border-4 border-black rounded-2xl text-black text-xl font-bold p-5 mt-6 cursor-pointer shadow-lg hover:bg-[#e0e0e0]">OK</button>
         </div>
     </div>
 
     <div id="successModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-        <div class="success-box">
-            <h3 class="text-4xl font-extrabold error-text mb-4">Success</h3>
-            <p class="text-2xl font-semibold error-text mb-2">Registration Success! You may now login.</p>
-            <button id="closeSuccessModal" class="ok-button">OK</button>
+        <div class="bg-green-600 border-4 border-white rounded-3xl p-10 shadow-2xl max-w-sm text-center">
+            <h3 class="text-4xl font-extrabold text-white mb-4" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Success</h3>
+            <p class="text-2xl font-semibold text-white mb-2" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Registration Success! You may now login.</p>
+            <button id="closeSuccessModal" class="bg-[#f0f0f0] border-4 border-black rounded-2xl text-black text-xl font-bold p-5 mt-6 cursor-pointer shadow-lg hover:bg-[#e0e0e0]">OK</button>
         </div>
     </div>
 @endsection

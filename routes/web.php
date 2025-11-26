@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -26,9 +27,9 @@ Route::get('/login-by-number', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('auth')->name('dashboard');
+})->name('dashboard');
 
 Route::post('/logout', function () {
-    // For demo purposes, just redirect to login
+    Auth::logout();
     return redirect()->route('login');
 })->name('logout');
